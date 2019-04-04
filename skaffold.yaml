@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-      template: '{{.DOCKER_REGISTRY}}/mgronvol/sample:{{.VERSION}}'
+      template: '{{.DOCKER_REGISTRY}}/nordeaoke10/sample:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -18,7 +18,7 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '{{.DOCKER_REGISTRY}}/mgronvol/sample:{{.DIGEST_HEX}}'
+        template: '{{.DOCKER_REGISTRY}}/nordeaoke10/sample:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
@@ -26,5 +26,5 @@ profiles:
       - name: sample
         chartPath: charts/sample
         setValueTemplates:
-          image.repository: '{{.DOCKER_REGISTRY}}/mgronvol/sample'
+          image.repository: '{{.DOCKER_REGISTRY}}/nordeaoke10/sample'
           image.tag: '{{.DIGEST_HEX}}'
