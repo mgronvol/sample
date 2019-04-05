@@ -23,7 +23,7 @@ spec:
       - name: ocirsecret
       containers:
       - name: {{ .Chart.Name }}
-        image: "fra.ocir.io/nordeaoke10/sample:{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: "fra.ocir.io/nordeaoke10/sample:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         env:
 {{- range $pkey, $pval := .Values.env }}
