@@ -20,7 +20,7 @@ spec:
 {{- end }}
     spec:
       imagePullSecrets:
-        - name: ocirsecret
+      - name: ocirsecret
       containers:
       - name: {{ .Chart.Name }}
         image: "fra.ocir.io/nordeaoke10/sample:{{ .Values.image.repository }}:{{ .Values.image.tag }}"
