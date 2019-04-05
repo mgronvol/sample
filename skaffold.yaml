@@ -1,4 +1,4 @@
-apiVersion: skaffold/v1beta2
+apiVersion: skaffold/v1beta2 
 kind: Config
 build:
   artifacts:
@@ -27,4 +27,4 @@ profiles:
         chartPath: charts/sample
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/nordeaoke10/sample'
-          image.tag: '{{.DIGEST_HEX}}' 
+          image.tag: '{{.DIGEST_HEX}}'
